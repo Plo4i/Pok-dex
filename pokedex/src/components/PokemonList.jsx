@@ -13,10 +13,8 @@ const PokemonList = () => {
             const data = await getPokemonList(limit, currentPage * limit);
             const pokemonDetails = await Promise.all(data.results.map(async (pokemon) => {
                 const details = await getPokemonDetails(pokemon.name);
-                // Assuming the first type is the primary type
                 const primaryType = details.types[0].type.name;
-                // Convert the type name to a CSS class name, e.g., "fire" to "pokemon-fire"
-                const typeClass = `pokemon-${primaryType.toLowerCase()}`;
+                const typeClass = `pokemon-${primaryType.toLowerCase()}`; // Converting the type of pokemon to a class so it can be styled easily
                 return { ...pokemon, imageUrl: details.sprites.front_default, typeClass };
             }));
             setPokemonList(pokemonDetails);
@@ -45,10 +43,10 @@ const PokemonList = () => {
         </div>
         <div className="switch-page-buttons">
             <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-                Previous
+                &lt; Previous
             </button>
             <button onClick={handleNextPage}>
-                Next
+                Next &gt;
             </button>
         </div>
         </>

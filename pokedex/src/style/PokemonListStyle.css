@@ -57,6 +57,24 @@
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    gap: 20px;
+}
+
+.switch-page-buttons button {
+    border: transparent;
+    border-radius: 5px;
+    background-color: #87CEEB;
+    color: #fff;
+    font-family: 'Poppins' !important;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 106px;
+    transition: ease .3s;
+}
+
+.switch-page-buttons button:hover {
+    background-color: #4682B4;
 }
 
 /* Color of card depending on the type of the pokemon */
