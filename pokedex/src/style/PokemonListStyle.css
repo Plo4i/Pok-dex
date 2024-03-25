@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+/* Container div styling */
 .pokemon-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +11,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Pokemon card styling */
 .pokemon {
     border-radius: 5px;
     border: solid 1px #000;
@@ -20,6 +23,8 @@
 .pokemon {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
+
+/* Hover over pokemon card style */
 .pokemon:hover {
   transform: scale(1.1);
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
@@ -43,100 +48,105 @@
     font-weight: 700;
 }
 
+.number {
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .switch-page-buttons {
     margin-top: 40px;
     display: flex;
     justify-content: center;
 }
 
-/* PokemonListStyle.css */
+/* Color of card depending on the type of the pokemon */
 
 /* Ground types */
 .pokemon-ground {
-    background-color: #8B4513; /* SaddleBrown for Ground type */
+    background-color: #8B4513; 
 }
 
 /* Water types */
 .pokemon-water {
-    background-color: #62929E; /* Blue for Water type */
+    background-color: #62929E; 
 }
 
 /* Fire types */
 .pokemon-fire {
-    background-color: #F96E46; /* Red for Fire type */
+    background-color: #F96E46; 
 }
 
 /* Fighting types */
 .pokemon-fighting {
-    background-color: #D84727; /* Red for Fighting type */
+    background-color: #D84727;
 }
 
 /* Flying types */
 .pokemon-flying {
-    background-color: #87CEEB; /* SkyBlue for Flying type */
+    background-color: #87CEEB; 
 }
 
 /* Poison types */
 .pokemon-poison {
-    background-color: #9932CC; /* DarkOrchid for Poison type */
+    background-color: #9932CC; 
 }
 
 /* Electric types */
 .pokemon-electric {
-    background-color: #FFD700; /* Gold for Electric type */
+    background-color: #FFD700; 
 }
 
 /* Psychic types */
 .pokemon-psychic {
-    background-color: #FF69B4; /* HotPink for Psychic type */
+    background-color: #FF69B4; 
 }
 
 /* Bug types */
 .pokemon-bug {
-    background-color: #D0E562; /* ForestGreen for Bug type */
+    background-color: #D0E562; 
 }
 
 /* Rock types */
 .pokemon-rock {
-    background-color: #B22222; /* FireBrick for Rock type */
+    background-color: #B22222; 
 }
 
 /* Ghost types */
 .pokemon-ghost {
-    background-color: #808080; /* Gray for Ghost type */
+    background-color: #808080; 
 }
 
 /* Dragon types */
 .pokemon-dragon {
-    background-color: #708090; /* SlateGray for Dragon type */
+    background-color: #708090; 
 }
 
 /* Dark types */
 .pokemon-dark {
-    background-color: #000000; /* Black for Dark type */
+    background-color: #000000; 
 }
 
 /* Steel types */
 .pokemon-steel {
-    background-color: #4682B4; /* SteelBlue for Steel type */
+    background-color: #4682B4; 
 }
 
 /* Fairy types */
 .pokemon-fairy {
-    background-color: #FFB6C1; /* LightPink for Fairy type */
+    background-color: #FFB6C1; 
 }
 
 /* Normal types */
 .pokemon-normal {
-    background-color: #A9A9A9; /* DarkGray for Normal type */
+    background-color: #A9A9A9;
 }
 
 /* Ice types */
 .pokemon-ice {
-    background-color: #ADD8E6; /* LightBlue for Ice type */
+    background-color: #ADD8E6; 
 }
 
 /* Grass types */
 .pokemon-grass {
-    background-color: #ACE894; /* Green for Grass type */
+    background-color: #ACE894; 
 }
