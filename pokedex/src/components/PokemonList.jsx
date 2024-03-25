@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getPokemonList, getPokemonDetails } from "../services/pokemonService";
 
+import '../style/PokemonListStyle.css'
+
 const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
@@ -23,18 +25,21 @@ const PokemonList = () => {
     const handlePreviousPage = () => setCurrentPage(currentPage - 1);
 
     return (
-        <div>
+        <>
+        <div className="pokemon-wrap">
             {pokemonList && pokemonList.map((pokemon, index) => (
                 <div className="pokemon" key={pokemon.name}>
                     <a href={`pokemon/${pokemon.name}`}>
-                        <div>
-                            <img src={pokemon.imageUrl} alt={pokemon.name} />
-                            <div>{index + 1 + (currentPage * limit)}</div>
+                        <div className="number">#{index + 1 + (currentPage * limit)}</div>
+                        <div className="image-and-name">
                             <div>{pokemon.name}</div>
+                            <img src={pokemon.imageUrl} alt={pokemon.name} />
                         </div>
                     </a>
                 </div>
             ))}
+        </div>
+        <div className="switch-page-buttons">
             <button onClick={handlePreviousPage} disabled={currentPage === 0}>
                 Previous
             </button>
@@ -42,6 +47,7 @@ const PokemonList = () => {
                 Next
             </button>
         </div>
+        </>
     );
 };
 
