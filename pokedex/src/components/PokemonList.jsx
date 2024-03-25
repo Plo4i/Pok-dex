@@ -1,17 +1,19 @@
-import React, {useState, useEffect} from "react";
-import { getPokemonList } from "../services/pokemonService";
+import React, { useState, useEffect } from "react";
+import { getPokemonList, getPokemonDetails } from "../services/pokemonService";
 
 const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const limit = 10;
 
-
     useEffect(() => {
-        const fetchPokemon = async() => {
+        const fetchPokemon = async () => {
             const data = await getPokemonList(limit, currentPage * limit);
-            console.log(data);
-            setPokemonList(data.results)
+            const pokemonDetails = await Promise.all(data.results.map(async (pokemon) => {
+                const details = await getPokemonDetails(pokemon.name);
+                return { ...pokemon, imageUrl: details.sprites.front_default };
+            }));
+            setPokemonList(pokemonDetails);
         };
 
         fetchPokemon();
@@ -22,8 +24,16 @@ const PokemonList = () => {
 
     return (
         <div>
-            {pokemonList && pokemonList.map((pokemon) => (
-                <a href={`pokemon/${pokemon.name}`}><div className="pokemon" key={pokemon.name}>{pokemon.name}</div></a>
+            {pokemonList && pokemonList.map((pokemon, index) => (
+                <div className="pokemon" key={pokemon.name}>
+                    <a href={`pokemon/${pokemon.name}`}>
+                        <div>
+                            <img src={pokemon.imageUrl} alt={pokemon.name} />
+                            <div>{index + 1 + (currentPage * limit)}</div>
+                            <div>{pokemon.name}</div>
+                        </div>
+                    </a>
+                </div>
             ))}
             <button onClick={handlePreviousPage} disabled={currentPage === 0}>
                 Previous
@@ -32,7 +42,7 @@ const PokemonList = () => {
                 Next
             </button>
         </div>
-    )
-}
+    );
+};
 
 export default PokemonList;
