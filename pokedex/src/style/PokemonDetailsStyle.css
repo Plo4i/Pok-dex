@@ -1,0 +1,45 @@
+.pokemon-details-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    height: 100vh;
+}
+
+.pokemon-details-box-wrap {
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 10px 50px;
+    width: 350px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.details-pokemon-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 28px;
+}
+
+.list-stat-name {
+    gap: 4px;
+}
+
+.stat-name {
+    display: flex;
+}
+
+.stat-name svg {
+    font-size: 24px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+}
+
+.bold-stat {
+    font-weight: 600;
+}
