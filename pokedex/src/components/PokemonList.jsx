@@ -13,7 +13,11 @@ const PokemonList = () => {
             const data = await getPokemonList(limit, currentPage * limit);
             const pokemonDetails = await Promise.all(data.results.map(async (pokemon) => {
                 const details = await getPokemonDetails(pokemon.name);
-                return { ...pokemon, imageUrl: details.sprites.front_default };
+                // Assuming the first type is the primary type
+                const primaryType = details.types[0].type.name;
+                // Convert the type name to a CSS class name, e.g., "fire" to "pokemon-fire"
+                const typeClass = `pokemon-${primaryType.toLowerCase()}`;
+                return { ...pokemon, imageUrl: details.sprites.front_default, typeClass };
             }));
             setPokemonList(pokemonDetails);
         };
@@ -28,12 +32,12 @@ const PokemonList = () => {
         <>
         <div className="pokemon-wrap">
             {pokemonList && pokemonList.map((pokemon, index) => (
-                <div className="pokemon" key={pokemon.name}>
+                <div className={`pokemon ${pokemon.typeClass}`} key={pokemon.name}>
                     <a href={`pokemon/${pokemon.name}`}>
                         <div className="number">#{index + 1 + (currentPage * limit)}</div>
                         <div className="image-and-name">
-                            <div>{pokemon.name}</div>
-                            <img src={pokemon.imageUrl} alt={pokemon.name} />
+                            <div className="pokemon-name">{pokemon.name}</div>
+                            <img className="pokemon-image" src={pokemon.imageUrl} alt={pokemon.name} />
                         </div>
                     </a>
                 </div>

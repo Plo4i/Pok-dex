@@ -17,7 +17,7 @@ const PokemonDetails = () => {
 
  return (
     <div>
-      <h2>{pokemonDetails.name}</h2>
+      <h2 className='pokemon-name'>{pokemonDetails.name}</h2>
       {/* Display other details here */}
     </div>
  );
