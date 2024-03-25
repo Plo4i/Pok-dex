@@ -28,6 +28,7 @@ const PokemonList = () => {
 
     return (
         <>
+        {/* Display cards */}
         <div className="pokemon-wrap">
             {pokemonList && pokemonList.map((pokemon, index) => (
                 <div className={`pokemon ${pokemon.typeClass}`} key={pokemon.name}>
@@ -41,6 +42,7 @@ const PokemonList = () => {
                 </div>
             ))}
         </div>
+        {/* Display Buttons */}
         <div className="switch-page-buttons">
             <button onClick={handlePreviousPage} disabled={currentPage === 0}>
                 &lt; Previous
