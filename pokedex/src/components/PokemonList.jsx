@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getPokemonList, getPokemonDetails } from "../services/pokemonService";
 
 import '../style/PokemonListStyle.css'
+import NavBar from "./NavBar";
 
 const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -28,6 +29,8 @@ const PokemonList = () => {
 
     return (
         <>
+        <NavBar />
+
         {/* Display cards */}
         <div className="pokemon-wrap">
             {pokemonList && pokemonList.map((pokemon, index) => (
