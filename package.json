@@ -2,7 +2,7 @@
   "name": "pokedex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://plo4i.github.io/Pokedex/",
+  "homepage": "https://plo4i.github.io/Pokedex",
   "dependencies": {
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/react": "^4.1.1",
@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
