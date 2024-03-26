@@ -1,14 +1,20 @@
-# Build stage
-FROM node:14 as build-stage
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
+# Use an official Node (version 16) runtime as the base image
+FROM node:16
 
-# Production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/build /usr/share/nginx/html
-COPY default.conf /etc/nginx/conf.d/default.conf
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install any needed packages specified in package.json
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Make port 3000 available to the world outside this container
 EXPOSE 3000
-CMD ["nginx", "-g", "daemon off;"]
+
+# Command to run the app using CMD which keeps the container running
+CMD [ "npm", "start" ]
