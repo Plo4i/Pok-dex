@@ -2,7 +2,6 @@
   "name": "pokedex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://plo4i.github.io/Assignment_2",
   "dependencies": {
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/react": "^4.1.1",
