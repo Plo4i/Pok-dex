@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Pokedex/static/css/main.df8b577f.css",
-    "main.js": "/Pokedex/static/js/main.efd7dcd3.js",
-    "static/js/845.8b41d880.chunk.js": "/Pokedex/static/js/845.8b41d880.chunk.js",
-    "static/media/about-background.jpg": "/Pokedex/static/media/about-background.92516de0e84f94fdcbbb.jpg",
-    "static/media/pokemon-logo.png": "/Pokedex/static/media/pokemon-logo.73735566c3ca3d51075c.png",
-    "index.html": "/Pokedex/index.html",
-    "main.df8b577f.css.map": "/Pokedex/static/css/main.df8b577f.css.map",
-    "main.efd7dcd3.js.map": "/Pokedex/static/js/main.efd7dcd3.js.map",
-    "845.8b41d880.chunk.js.map": "/Pokedex/static/js/845.8b41d880.chunk.js.map"
+    "main.css": "/Assignment_2/static/css/main.047cd4da.css",
+    "main.js": "/Assignment_2/static/js/main.3e6d6377.js",
+    "static/js/845.8b41d880.chunk.js": "/Assignment_2/static/js/845.8b41d880.chunk.js",
+    "static/media/about-background.jpg": "/Assignment_2/static/media/about-background.92516de0e84f94fdcbbb.jpg",
+    "static/media/pokemon-logo.png": "/Assignment_2/static/media/pokemon-logo.73735566c3ca3d51075c.png",
+    "index.html": "/Assignment_2/index.html",
+    "main.047cd4da.css.map": "/Assignment_2/static/css/main.047cd4da.css.map",
+    "main.3e6d6377.js.map": "/Assignment_2/static/js/main.3e6d6377.js.map",
+    "845.8b41d880.chunk.js.map": "/Assignment_2/static/js/845.8b41d880.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df8b577f.css",
-    "static/js/main.efd7dcd3.js"
+    "static/css/main.047cd4da.css",
+    "static/js/main.3e6d6377.js"
   ]
 }
