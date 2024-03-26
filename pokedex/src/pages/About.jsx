@@ -8,7 +8,7 @@ const About = () => {
  return (
     <>
     <NavBar />
-    <div>
+    <div className='about-section'>
       <h2 className='about-title'>About</h2>
       <p className='about-text'>
         This is a Pokédex application built with React. The application uses the PokeAPI 

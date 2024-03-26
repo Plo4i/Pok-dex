@@ -1,5 +1,18 @@
-.about-title,
+.about-title {
+    font-family: 'Poppins';
+    padding: 20px 20px 0px 20px;
+    margin: 0;
+}
+
 .about-text {
     font-family: 'Poppins';
     padding: 0px 20px;
+}
+
+.about-section {
+    background-image: url('../images/about-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 92vh;
 }
