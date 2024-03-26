@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import PokemonLogo from '../images/pokemon-logo.png'
+
 const NavBar = ( onLinkClick ) => {
     const currentPath = window.location.pathname;
 
@@ -30,9 +32,10 @@ const NavBar = ( onLinkClick ) => {
         <header className='header'>
             <div className='header-container'>
                 <div className='landing-page-topbar-logo-section'>
+                    <a className='logo' href="/"><img src={PokemonLogo} alt="Logo" /></a>
                     <div className='links-to-pages'>
                         <a href="/" onClick={handleLinkClick} className={currentPath === "/" ? "active-nav-menu-link" : ""}>Pokemons</a>
-                        <a href="/about" onClick={handleLinkClick} className={currentPath === "/about-us" ? "active-nav-menu-link" : ""}>About</a>
+                        <a href="/about" onClick={handleLinkClick} className={currentPath === "/about" ? "active-nav-menu-link" : ""}>About</a>
                     </div>
                 </div>
             </div>
