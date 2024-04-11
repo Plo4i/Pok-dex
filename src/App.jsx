@@ -9,8 +9,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/Pokedex" exact element={<PokemonList />} />
-        <Route path="/pokemon/:name" element={<PokemonDetails />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/Pokedex/pokemon/:name" element={<PokemonDetails />} />
+        <Route path="/Pokedex/about" element={<About />} />
       </Routes>
     </Router>
  );
