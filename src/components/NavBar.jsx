@@ -34,8 +34,8 @@ const NavBar = ( onLinkClick ) => {
                 <div className='landing-page-topbar-logo-section'>
                     <a className='logo' href="/Pokedex"><img src={PokemonLogo} alt="Logo" /></a>
                     <div className='links-to-pages'>
-                        <a href="/Pokedex" onClick={handleLinkClick} className={currentPath === "/Pokedex" ? "active-nav-menu-link" : ""}>Pokemons</a>
-                        <a href="/Pokedex/about" onClick={handleLinkClick} className={currentPath === "/Pokedex/about" ? "active-nav-menu-link" : ""}>About</a>
+                        <a href="/Pokedex" onClick={handleLinkClick} className={currentPath === "/Pokedex/" ? "active-nav-menu-link" : ""}>Pokemons</a>
+                        <a href="/Pokedex/?/about" onClick={handleLinkClick} className={currentPath === "/Pokedex/about" ? "active-nav-menu-link" : ""}>About</a>
                     </div>
                 </div>
             </div>
