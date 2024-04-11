@@ -35,7 +35,7 @@ const PokemonList = () => {
         <div className="pokemon-wrap">
             {pokemonList && pokemonList.map((pokemon, index) => (
                 <div className={`pokemon ${pokemon.typeClass}`} key={pokemon.name}>
-                    <a href={`pokemon/${pokemon.name}`}>
+                    <a href={`/Pokedexpokemon/${pokemon.name}`}>
                         <div className="number">#{index + 1 + (currentPage * limit)}</div>
                         <div className="image-and-name">
                             <div className="pokemon-name">{pokemon.name}</div>
