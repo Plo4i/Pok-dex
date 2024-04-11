@@ -7,7 +7,7 @@ import About from './pages/About';
 function App() {
  return (
     <Router>
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path="/Pokedex" exact element={<PokemonList />} />
         <Route path="/Pokedex/pokemon/:name" element={<PokemonDetails />} />
         <Route path="/Pokedex/about" element={<About />} />
